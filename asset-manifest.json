@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/krivoruchkoND/lunch-menu.git/static/css/main.ed6ac0a0.chunk.css",
-    "main.js": "/krivoruchkoND/lunch-menu.git/static/js/main.60d970c3.chunk.js",
-    "main.js.map": "/krivoruchkoND/lunch-menu.git/static/js/main.60d970c3.chunk.js.map",
-    "runtime-main.js": "/krivoruchkoND/lunch-menu.git/static/js/runtime-main.0ac7233c.js",
-    "runtime-main.js.map": "/krivoruchkoND/lunch-menu.git/static/js/runtime-main.0ac7233c.js.map",
-    "static/css/2.53f2de8a.chunk.css": "/krivoruchkoND/lunch-menu.git/static/css/2.53f2de8a.chunk.css",
-    "static/js/2.2eb75b0b.chunk.js": "/krivoruchkoND/lunch-menu.git/static/js/2.2eb75b0b.chunk.js",
-    "static/js/2.2eb75b0b.chunk.js.map": "/krivoruchkoND/lunch-menu.git/static/js/2.2eb75b0b.chunk.js.map",
-    "index.html": "/krivoruchkoND/lunch-menu.git/index.html",
-    "precache-manifest.b5c72f5e2f2fb69c7c5f568c7c40eff5.js": "/krivoruchkoND/lunch-menu.git/precache-manifest.b5c72f5e2f2fb69c7c5f568c7c40eff5.js",
-    "service-worker.js": "/krivoruchkoND/lunch-menu.git/service-worker.js",
-    "static/css/2.53f2de8a.chunk.css.map": "/krivoruchkoND/lunch-menu.git/static/css/2.53f2de8a.chunk.css.map",
-    "static/css/main.ed6ac0a0.chunk.css.map": "/krivoruchkoND/lunch-menu.git/static/css/main.ed6ac0a0.chunk.css.map",
-    "static/js/2.2eb75b0b.chunk.js.LICENSE.txt": "/krivoruchkoND/lunch-menu.git/static/js/2.2eb75b0b.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/krivoruchkoND/lunch-menu.git/static/media/glyphicons-halflings-regular.fa277232.woff"
+    "main.css": "/lunch-menu/static/css/main.ed6ac0a0.chunk.css",
+    "main.js": "/lunch-menu/static/js/main.ad43ba59.chunk.js",
+    "main.js.map": "/lunch-menu/static/js/main.ad43ba59.chunk.js.map",
+    "runtime-main.js": "/lunch-menu/static/js/runtime-main.8e735e2e.js",
+    "runtime-main.js.map": "/lunch-menu/static/js/runtime-main.8e735e2e.js.map",
+    "static/css/2.f84a9359.chunk.css": "/lunch-menu/static/css/2.f84a9359.chunk.css",
+    "static/js/2.2eb75b0b.chunk.js": "/lunch-menu/static/js/2.2eb75b0b.chunk.js",
+    "static/js/2.2eb75b0b.chunk.js.map": "/lunch-menu/static/js/2.2eb75b0b.chunk.js.map",
+    "index.html": "/lunch-menu/index.html",
+    "precache-manifest.3d6caf192e3dfe8f6597eb580b7c96b1.js": "/lunch-menu/precache-manifest.3d6caf192e3dfe8f6597eb580b7c96b1.js",
+    "service-worker.js": "/lunch-menu/service-worker.js",
+    "static/css/2.f84a9359.chunk.css.map": "/lunch-menu/static/css/2.f84a9359.chunk.css.map",
+    "static/css/main.ed6ac0a0.chunk.css.map": "/lunch-menu/static/css/main.ed6ac0a0.chunk.css.map",
+    "static/js/2.2eb75b0b.chunk.js.LICENSE.txt": "/lunch-menu/static/js/2.2eb75b0b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/lunch-menu/static/media/glyphicons-halflings-regular.fa277232.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.0ac7233c.js",
-    "static/css/2.53f2de8a.chunk.css",
+    "static/js/runtime-main.8e735e2e.js",
+    "static/css/2.f84a9359.chunk.css",
     "static/js/2.2eb75b0b.chunk.js",
     "static/css/main.ed6ac0a0.chunk.css",
-    "static/js/main.60d970c3.chunk.js"
+    "static/js/main.ad43ba59.chunk.js"
   ]
 }
