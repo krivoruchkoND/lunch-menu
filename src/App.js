@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import { Container, Dropdown, Row, Col, Card, Carousel } from 'react-bootstrap';
+import { Container, Dropdown, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -116,61 +116,65 @@ function Drinks() {
     </Container>
   );
 }
+
+function CarouselDraft() {
+  return (
+    <Carousel pause>
+      <Carousel.Item>
+        <img
+          className="d-block mx-auto"
+          src="https://via.placeholder.com/200x100.png"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block mx-auto"
+          src="https://via.placeholder.com/200x100.png"
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block mx-auto"
+          src="https://via.placeholder.com/200x100.png"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
+}
+
 function Lunch() {
   return (
     <Container className="text-center">
       <Card>
         <h1>Build your lunch</h1>
       </Card>
-      <Card className='bg-secondary'>
-        <Carousel pause>
-          <Carousel.Item>
-            <img
-              className="d-block mx-auto"
-              src="https://via.placeholder.com/200x100.png"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block mx-auto"
-              src="https://via.placeholder.com/200x100.png"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block mx-auto"
-              src="https://via.placeholder.com/200x100.png"
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+      <Card className="bg-secondary">
+        <CarouselDraft />
+      </Card>
+      <Card className="bg-secondary">
+        <CarouselDraft />
+      </Card>
+      <Card className="bg-secondary">
+        <CarouselDraft />
+      </Card>
+      <Card className="bg-secondary">
+        <CarouselDraft />
       </Card>
       <Card>
-        
-      </Card>
-      <Card>
-        
-      </Card>
-      <Card>
-        
-      </Card>
-      <Card>
-        
+        <Button className="w-25 mx-auto">Order</Button>
       </Card>
     </Container>
   );
