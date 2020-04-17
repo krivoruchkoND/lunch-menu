@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import { Container, Dropdown, Row, Col, Card } from 'react-bootstrap';
+import { Container, Dropdown, Row, Col, Card, Carousel } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -69,7 +69,7 @@ function Home() {
       <Card>
         <div className="card-body">
           <Row>
-            <Col>New</Col>
+            <Col>CarouselNew</Col>
             <Col>Recomended</Col>
             <Col>Hot</Col>
           </Row>
@@ -116,11 +116,62 @@ function Drinks() {
     </Container>
   );
 }
-
 function Lunch() {
   return (
-    <Container>
-      <h2>Lunch</h2>
+    <Container className="text-center">
+      <Card>
+        <h1>Build your lunch</h1>
+      </Card>
+      <Card className='bg-secondary'>
+        <Carousel pause>
+          <Carousel.Item>
+            <img
+              className="d-block mx-auto"
+              src="https://via.placeholder.com/200x100.png"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block mx-auto"
+              src="https://via.placeholder.com/200x100.png"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block mx-auto"
+              src="https://via.placeholder.com/200x100.png"
+              alt="Third slide"
+            />
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </Card>
+      <Card>
+        
+      </Card>
+      <Card>
+        
+      </Card>
+      <Card>
+        
+      </Card>
+      <Card>
+        
+      </Card>
     </Container>
   );
 }
