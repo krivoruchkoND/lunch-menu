@@ -1,4 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
+import { Container, Dropdown, Row, Col, Card } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,40 +8,30 @@ import {
   Link
 } from "react-router-dom";
 
-// This site has 3 pages, all of which are rendered
-// dynamically in the browser (not server rendered).
-//
-// Although the page does not ever refresh, notice how
-// React Router keeps the URL up to date as you navigate
-// through the site. This preserves the browser history,
-// making sure things like the back button and bookmarks
-// work properly.
-
 export default function BasicExample() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-        </ul>
-
+      <Container>
+        <Row className="align-items-center">
+          <Col xs={2}>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                Menu
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as="button"><Link to="/deals">today's deals</Link></Dropdown.Item>
+                <Dropdown.Item as="button"><Link to="/lunch">business lunch</Link></Dropdown.Item>
+                <Dropdown.Item as="button"><Link to="/menu">menu</Link></Dropdown.Item>
+                <Dropdown.Item as="button"><Link to="/drinks">drinks</Link></Dropdown.Item>
+                <Dropdown.Item as="button"><Link to="/about">about us</Link></Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+          <Col>
+            <h2 className="text-center"><Link to="/">Restaurant lunch menu</Link></h2>
+          </Col>
+        </Row>
         <hr />
-
-        {/*
-          A <Switch> looks through all its children <Route>
-          elements and renders the first one whose path
-          matches the current URL. Use a <Switch> any time
-          you have multiple routes, but you want only one
-          of them to render at a time
-        */}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -47,38 +39,88 @@ export default function BasicExample() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/deals">
+            <Deals />
+          </Route>
+          <Route path="/lunch">
+            <Lunch />
+          </Route>
+          <Route path="/menu">
+            <Menu />
+          </Route>
+          <Route path="/drinks">
+            <Drinks />
           </Route>
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 }
 
-// You can think of these components as "pages"
-// in your app.
-
 function Home() {
   return (
-    <div>
-      <h2>Home</h2>
-    </div>
+    <Container className="text-center">
+      <Card>
+        <div className="card-body">
+          <Link to="/deals">Special offer</Link>
+        </div>
+      </Card>
+      <hr />
+      <Card>
+        <div className="card-body">
+          <Row>
+            <Col>New</Col>
+            <Col>Recomended</Col>
+            <Col>Hot</Col>
+          </Row>
+        </div>
+      </Card>
+      <hr />
+      <Card>
+        <div className="card-body">
+          <Link to="/lunch">Build your lunch</Link>
+        </div>
+      </Card>
+    </Container>
   );
 }
 
 function About() {
   return (
-    <div>
+    <Container>
       <h2>About</h2>
-    </div>
+    </Container>
   );
 }
 
-function Dashboard() {
+function Deals() {
   return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
+    <Container>
+      <h2>Deals</h2>
+    </Container>
+  );
+}
+
+function Menu() {
+  return (
+    <Container>
+      <h2>Menu</h2>
+    </Container>
+  );
+}
+
+function Drinks() {
+  return (
+    <Container>
+      <h2>Drinks</h2>
+    </Container>
+  );
+}
+
+function Lunch() {
+  return (
+    <Container>
+      <h2>Lunch</h2>
+    </Container>
   );
 }
