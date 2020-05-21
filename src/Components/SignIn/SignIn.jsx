@@ -9,11 +9,10 @@ import Tab from 'react-bootstrap/Tab';
 import './SignIn.css';
 
 const SignIn = (props) => {
-
     return(
         <Modal show={props.show} onHide={props.handleClose} animation={false}>
             <Modal.Header closeButton >
-                <Modal.Title>Sign In or Create Account</Modal.Title>
+                <Modal.Title>Sign In or Crate Account</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Tabs defaultActiveKey="create" className="flex-row">
@@ -24,7 +23,7 @@ const SignIn = (props) => {
                                 <Form.Control type="text" placeholder="Enter name" />
                             </Form.Group>
                             <Form.Group controlId="registerEmail">
-                                <Form.Label>Email address</Form.Label>
+                                <Form.Label>Your Email</Form.Label>
                                 <Form.Control type="email" placeholder="Enter email" />
                             </Form.Group>
                             <Form.Group controlId="registerPassword">
@@ -32,21 +31,21 @@ const SignIn = (props) => {
                                 <Form.Control type="password" placeholder="Password" />
                             </Form.Group>
                             <Form.Group controlId="registerPasswordConfirm">
-                                <Form.Label>Confirm Password</Form.Label>
+                                <Form.Label>Confirm password</Form.Label>
                                 <Form.Control type="password" placeholder="Confirm Password" />
                             </Form.Group>
                             <Button variant="primary" type="submit" className="mr-2">
-                                Create Account
+                                Create
                             </Button>
                             <Button variant="secondary" onClick={props.handleClose}>
-                                Close
+                                Cancel
                             </Button>
                         </Form>
                     </Tab>
                     <Tab eventKey="signIn" title="Sign In">
                         <Form>
                             <Form.Group controlId="signInEmail" className="mt-2">
-                                <Form.Label>Email address</Form.Label>
+                                <Form.Label>Your Email</Form.Label>
                                 <Form.Control type="email" placeholder="Enter email" />
                             </Form.Group>
                             <Form.Group controlId="signInPassword">
@@ -57,7 +56,7 @@ const SignIn = (props) => {
                                 Sign In
                             </Button>
                             <Button variant="secondary" onClick={props.handleClose}>
-                                Close
+                                Cancel
                             </Button>
                         </Form>
                     </Tab>

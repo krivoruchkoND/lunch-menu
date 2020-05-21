@@ -2,67 +2,33 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Carousel from 'react-bootstrap/Carousel';
+import BuildInCarousel from '../BuildInCarousel';
 
 function CarouselDraft() {
+  const items = ["https://via.placeholder.com/200x100.png", "https://via.placeholder.com/200x100.png", "https://via.placeholder.com/200x100.png"];
   return (
-    <Carousel pause>
-      <Carousel.Item>
-        <img
-          className="d-block mx-auto"
-          src="https://via.placeholder.com/200x100.png"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block mx-auto"
-          src="https://via.placeholder.com/200x100.png"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block mx-auto"
-          src="https://via.placeholder.com/200x100.png"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-  );
+      <BuildInCarousel autoPlay={false} imgArray={items} />
+  );  
 }
 
 export default function Lunch() {
   return (
     <Container className="text-center">
-      <Card>
-        <h1>Build your lunch</h1>
-      </Card>
-      <Card className="bg-secondary">
-        <CarouselDraft />
-      </Card>
-      <Card className="bg-secondary">
-        <CarouselDraft />
-      </Card>
-      <Card className="bg-secondary">
-        <CarouselDraft />
-      </Card>
-      <Card className="bg-secondary">
-        <CarouselDraft />
-      </Card>
-      <Card>
-        <Button className="w-25 mx-auto">Order</Button>
-      </Card>
+      <h3>Build your lunch</h3>
+      <hr />
+      <h3>Select Soup</h3>
+      <CarouselDraft />
+      <hr />
+      <h3>Select Main Course</h3>
+      <CarouselDraft />
+      <hr />
+      <h3>Select Salad</h3>
+      <CarouselDraft />
+      <hr />
+      <h3>Select Drink</h3>
+      <CarouselDraft />
+      <hr />
+      <Button className="w-25 mx-auto">Order</Button>
     </Container>
   );
 }

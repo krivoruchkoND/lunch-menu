@@ -7,19 +7,19 @@ import dessertIcon from '../../Icons/dessert.png';
 export default function Menu() {
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm">
           <ul className="navbar-nav">
               <li className="nav-item">
-                  <a className="nav-link" href='#salads'>Salads</a>
+                  <a className="nav-link" href='#salads'><h3>Salads</h3></a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" href='#soups'>Soups</a>
+                  <a className="nav-link" href='#soups'><h3>Soups</h3></a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" href='#mains'>Mains</a>
+                  <a className="nav-link" href='#mains'><h3>Mains</h3></a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" href='#dessert'>Dessert</a>
+                  <a className="nav-link" href='#dessert'><h3>Dessert</h3></a>
               </li>
           </ul>
       </nav>

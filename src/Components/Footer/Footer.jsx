@@ -22,10 +22,7 @@ const Footer = () => {
                     Lunch Menu © 2020 All Rights Reserved
                 </p>
                 <p>
-                    Developed by 
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/krivoruchkoND">
-                        Krivoruchko Nikita
-                    </a>
+                    Developed by ETU LETI Students
                 </p>
             </div>
         </>

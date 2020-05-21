@@ -8,19 +8,19 @@ import coffeeIcon from '../../Icons/coffee.png';
 export default function Drinks() {
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm">
           <ul className="navbar-nav">
               <li className="nav-item">
-                  <a className="nav-link" href='#tea'>Tea</a>
+                  <a className="nav-link" href='#tea'><h3>Tea</h3></a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" href='#coffee'>Coffee</a>
+                  <a className="nav-link" href='#coffee'><h3>Coffee</h3></a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" href='#soda'>Soda</a>
+                  <a className="nav-link" href='#soda'><h3>Soda</h3></a>
               </li>
               <li className="nav-item">
-                  <a className="nav-link" href='#juice'>Juice</a>
+                  <a className="nav-link" href='#juice'><h3>Juice</h3></a>
               </li>
           </ul>
       </nav>

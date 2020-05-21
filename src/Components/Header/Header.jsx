@@ -23,7 +23,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="md" className="flex-md-row-reverse px-0">
             <Navbar.Toggle aria-controls="basic-navbar-nav" id="navbar-toggle"/>
             <Navbar.Brand className="d-md-none">
-                <Link to="/home">lunch menu</Link> 
+                <Link to="/">lunch menu</Link> 
             </Navbar.Brand>
             <Dropdown drop={'left'}>
                 <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">

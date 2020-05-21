@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-export default function BuildInCarousel({imgArray}) {
+export default function BuildInCarousel(props) {
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
@@ -24,11 +24,11 @@ export default function BuildInCarousel({imgArray}) {
     return(
       <Carousel
           swipeable={true}
-          draggable={false}
+          draggable={true}
           showDots={false}
           responsive={responsive}
           infinite={true}
-          autoPlay={true}
+          autoPlay={props.autoPlay}
           autoPlaySpeed={5000}
           transitionDuration={500}
           containerClass="carousel-container"
@@ -36,7 +36,7 @@ export default function BuildInCarousel({imgArray}) {
           dotListClass="custom-dot-list-style d-lg-none"
           itemClass="carousel-item-padding-40-px"
       >
-        {imgArray.map((image, i) => (
+        {props.imgArray.map((image, i) => (
           <div key={i}>
             <img
               className="d-block mx-auto carousel-image"
