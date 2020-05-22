@@ -9,27 +9,27 @@ const NavList = (props) => {
         <Nav className={props.className}>
             <Nav.Item className="btn btn-light m-1 p-0">
                 <Nav.Link className="link-color" eventKey="1" as={Link} to="/deals">
-                    today's deals
+                    Today's Deals
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item className="btn btn-light m-1 p-0">
                 <Nav.Link className="link-color" eventKey="1" as={Link} to="/lunch">
-                    business lunch
+                    Business Lunch
                 </Nav.Link>
             </Nav.Item>
             <Nav.Item className="btn btn-light m-1 p-0">
                 <Nav.Link className="link-color" eventKey="1" as={Link} to="/menu">
-                    menu
+                    Menu
                 </Nav.Link>
             </Nav.Item>
-            <Nav.Item className="btn btn-light m-1 p-0">
+            {/* <Nav.Item className="btn btn-light m-1 p-0">
                 <Nav.Link className="link-color" eventKey="1" as={Link} to="/drinks">
-                    drinks
+                    Drinks
                 </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
             <Nav.Item className="btn btn-light m-1 p-0">
                 <Nav.Link className="link-color" eventKey="1" as={Link} to="/about">
-                    about us
+                    About Us
                 </Nav.Link>
             </Nav.Item>
         </Nav>
