@@ -2,3 +2,9 @@
     height: 2rem;
     cursor: pointer;
 }
+ .brand-bame,
+ .brand-bame:focus{
+     color: black;
+     text-decoration: none;
+ }
+ 
