@@ -1,12 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Card from 'react-bootstrap/Card';
 import './Menu.css';
 
 export default function Menu() {
+    const [showModal, setShowModal] = useState(false);
+    const [dish, setDish] = useState({});
     const [soups, setSoups] = useState([]);
     const [hots, setHots] = useState([]);
     const [salads, setSalads] = useState([]);
     const [drinks, setDrinks] = useState([]);
     const [snacks, setSnacks] = useState([]);
+
+    const handleShow = (id) => {
+        fetchDish(id);
+        setShowModal(true);
+    };
+
+    const handleClose = () => {
+        setShowModal(false);
+    };
 
     const setter = (type, data) => {
         switch(type){
@@ -18,6 +31,18 @@ export default function Menu() {
             default: return;
         }
     }
+
+    async function fetchDish(id) {
+        console.log('fetchDish');
+        const response = await fetch(`http://localhost:5000/api/dishes/${id}`, {
+          type: 'GET',
+        });
+        response
+          .json()
+          .then(res => {
+            setDish(res);
+          })
+    };
 
     async function fetchData(type) {
         console.log('fetchData');
@@ -37,7 +62,40 @@ export default function Menu() {
         fetchData('salad');
         fetchData('drink');
         fetchData('snack');
-    }, [])
+    }, []);
+
+    const DishModal = (props) => {
+        return(
+            <Modal show={props.show} onHide={props.handleClose} animation={false}>
+                <Modal.Header closeButton >
+                <Modal.Title>{dish.name}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Card style={{ width: '18rem' }} className="mx-auto mb-2">
+                        <Card.Img variant="top" src={"http://localhost:5000" + dish.image} />
+                        <Card.Body>
+                            <Card.Text>
+                                <p>{dish.description}</p>
+                                <p>Price: {dish.price}</p>
+                                <p>Rating: {dish.rating}</p>
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                    {dish.reviews ? dish.reviews.map((review, i) => (
+                        <Card style={{ width: '20rem' }} className="mx-auto mb-2" key={i}>
+                            <Card.Body>
+                                <Card.Title>{review.added_by} Rate - {review.mark}</Card.Title>
+                                <Card.Subtitle className="mb-2 text-muted">{review.created_at}</Card.Subtitle>
+                                <Card.Text>
+                                    {review.comment}
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    )) : null}
+                </Modal.Body>
+            </Modal>
+        );
+    }
 
     return (
         <div className="container">
@@ -67,7 +125,7 @@ export default function Menu() {
                     </h2>
                     <ul className="list-group list-group-flush">
                         { salads.map((salad,i) => (
-                            <li key={i} className="list-group-item d-flex align-items-center justify-content-center">
+                            <li onClick={(e) => handleShow(salad.id, e)} key={i} className="list-group-item d-flex align-items-center justify-content-center">
                                 <img id={salad.id} src={"http://localhost:5000" + salad.image} alt="..." className="img-fluid w-25 mr-4"/>
                                 <div>
                                     <h3>{salad.name}</h3>
@@ -151,6 +209,7 @@ export default function Menu() {
                     </ul>
                 </div>
             </section>
+            <DishModal show={showModal} handleClose={handleClose}/>
         </div>
     );
 }
